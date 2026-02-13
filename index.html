@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratório de CSS (foco em estilos)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topo">
+    <div class="container topo__conteudo">
+      <h1 class="logo">Lab CSS</h1>
+
+      <nav class="menu">
+        <a class="menu__link" href="#tipografia">Tipografia</a>
+        <a class="menu__link" href="#layout">Layout</a>
+        <a class="menu__link" href="#componentes">Componentes</a>
+      </nav>
+
+      <button class="botao botao--primario">Entrar</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="tipografia">
+      <div class="hero__texto">
+        <p class="badge">Aula prática</p>
+        <h2>CSS na veia: do básico ao “uau”</h2>
+        <p class="lead">
+          Aqui você vai testar box model, flex, grid, pseudo-classes, responsividade e animações.
+          O HTML é só o suporte. O show é o CSS.
+        </p>
+
+        <div class="acoes">
+          <button class="botao botao--primario">Começar</button>
+          <button class="botao botao--outline">Ver exemplos</button>
+        </div>
+      </div>
+
+      <div class="hero__card">
+        <h3>Checklist de treino</h3>
+        <ul class="lista">
+          <li>Box model (margin/padding/border)</li>
+          <li>Flex + Grid</li>
+          <li>Position + z-index</li>
+          <li>Pseudo-classes (:hover, :focus)</li>
+          <li>Responsividade (media query)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bloco" id="layout">
+      <h2 class="titulo-secao">Layout: Grid de cards</h2>
+
+      <div class="grade-cards">
+        <article class="card">
+          <div class="card__topo">
+            <span class="tag tag--verde">Fácil</span>
+            <span class="info">12 min</span>
+          </div>
+          <h3 class="card__titulo">Box Model</h3>
+          <p class="card__texto">Treine espaçamentos, bordas, outlines, e como o tamanho real do elemento muda.</p>
+          <a class="link" href="#">Abrir</a>
+        </article>
+
+        <article class="card destaque">
+          <div class="card__topo">
+            <span class="tag tag--azul">Médio</span>
+            <span class="info">18 min</span>
+          </div>
+          <h3 class="card__titulo">Flexbox</h3>
+          <p class="card__texto">Alinhamento horizontal/vertical, gap, justify-content e align-items na prática.</p>
+          <a class="link" href="#">Abrir</a>
+        </article>
+
+        <article class="card">
+          <div class="card__topo">
+            <span class="tag tag--roxo">Avançando</span>
+            <span class="info">25 min</span>
+          </div>
+          <h3 class="card__titulo">Grid</h3>
+          <p class="card__texto">Colunas responsivas, auto-fit, minmax e composição de layout em blocos.</p>
+          <a class="link" href="#">Abrir</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="bloco" id="componentes">
+      <h2 class="titulo-secao">Componentes: formulário + tabela</h2>
+
+      <div class="dois-col">
+        <form class="form">
+          <label class="rotulo">
+            Nome
+            <input class="campo" type="text" placeholder="Digite seu nome" />
+          </label>
+
+          <label class="rotulo">
+            Categoria
+            <select class="campo">
+              <option>Iniciante</option>
+              <option>Intermediário</option>
+              <option>Avançado</option>
+            </select>
+          </label>
+
+          <label class="rotulo">
+            Observações
+            <textarea class="campo" rows="4" placeholder="Escreva aqui..."></textarea>
+          </label>
+
+          <button class="botao botao--primario" type="button">Salvar</button>
+          <p class="ajuda">Dica: teste :focus, :disabled, :invalid, outline e box-shadow.</p>
+        </form>
+
+        <div class="tabela-wrapper">
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Onde usar</th>
+                <th>Nível</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>display</td>
+                <td>layout</td>
+                <td>base</td>
+              </tr>
+              <tr>
+                <td>flex/grid</td>
+                <td>cards</td>
+                <td>médio</td>
+              </tr>
+              <tr>
+                <td>position</td>
+                <td>badge/menu</td>
+                <td>médio</td>
+              </tr>
+              <tr>
+                <td>transition</td>
+                <td>hover</td>
+                <td>médio</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="toast">
+            <strong>Observação:</strong> esse bloco usa <code>position: fixed</code> + <code>z-index</code>.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__conteudo">
+      <p>Feito para treinar CSS na prática.</p>
+      <a class="link" href="#tipografia">Voltar ao topo</a>
+    </div>
+  </footer>
+</body>
+</html>
